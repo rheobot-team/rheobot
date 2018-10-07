@@ -21,8 +21,8 @@ Then add **hubot-gradle-version** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-user1>> hubot hello
-hubot>> hello!
+user1>> @hubot gradle version
+hubot>> @user1 10.1.42
 ```
 
 ## NPM Module

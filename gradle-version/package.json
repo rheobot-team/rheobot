@@ -7,10 +7,10 @@
   "keywords": "hubot, hubot-scripts, gradle",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-gradle-version.git"
+    "url": "git://github.com/rheobot-team/rheobot.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-gradle-version/issues"
+    "url": "https://github.com/rheobot-team/rheobot/issues"
   },
   "dependencies": {},
   "peerDependencies": {
