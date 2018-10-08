@@ -21,8 +21,24 @@ Then add **hubot-maven-search** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-user1>> hubot hello
-hubot>> hello!
+user1>> @hubot maven spring-boot
+hubot>> @user1
+org.springframework.boot:spring-boot:10.1.42
+org.apache.camel:spring-boot:1.1.1
+org.activiti:spring-boot:0.0.0
+...
+
+user1>> @hubot maven junit
+hubot>> @user1
+junit:junit:10.1.42
+
+user1>> @hubot maven org.springframework.boot:spring-boot
+hubot>> @user1
+org.springframework.boot:spring-boot:10.1.42
+
+user1>> @hubot maven junit:junit
+hubot>> @user1
+junit:junit:10.1.42
 ```
 
 ## NPM Module
