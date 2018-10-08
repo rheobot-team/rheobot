@@ -14,7 +14,7 @@ module.exports = (robot) ->
         response.reply "Encountered an error:\n#{err}"
       else
         statusCode = parseInt(res.statusCode)
-        if 200 <= statusCode and statusCode < 300
+        if statusCode >= 200 and statusCode < 300
           response.reply JSON.parse(body).version
         else
           response.reply "Encountered an error, HTTP #{statusCode}:\n#{body}"
