@@ -8,5 +8,13 @@
 #   Jonatan Ivanov <jonatan.ivanov@gmail.com>
 
 module.exports = (robot) ->
-  robot.respond /.*[Gg]radle version.*/, (res) ->
-    res.reply "10.1.42"
+  robot.respond /.*[Gg]radle version.*/, (response) ->
+    robot.http('https://services.gradle.org/versions/current').get() (err, res, body) ->
+      if err
+        response.reply "Encountered an error:\n#{err}"
+      else
+        statusCode = parseInt(res.statusCode)
+        if 200 <= statusCode and statusCode < 300
+          response.reply JSON.parse(body).version
+        else
+          response.reply "Encountered an error, HTTP #{statusCode}:\n#{body}"
