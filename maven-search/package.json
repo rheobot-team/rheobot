@@ -7,10 +7,10 @@
   "keywords": "hubot, hubot-scripts, maven",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-maven-search.git"
+    "url": "git://github.com/rheobot-team/rheobot.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-maven-search/issues"
+    "url": "https://github.com/rheobot-team/rheobot/issues"
   },
   "dependencies": {},
   "peerDependencies": {

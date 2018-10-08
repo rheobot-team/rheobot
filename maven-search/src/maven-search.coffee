@@ -1,22 +1,13 @@
 # Description
 #   A hubot script that searches in maven central repository
 #
-# Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
-#
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
-#
-# Notes:
-#   <optional notes required for the script>
+#   hubot maven <search term> - searches in maven central repo and replies with the result
 #
 # Author:
 #   Jonatan Ivanov <jonatan.ivanov@gmail.com>
 
 module.exports = (robot) ->
-  robot.respond /hello/, (res) ->
-    res.reply "hello!"
-
-  robot.hear /orly/, (res) ->
-    res.send "yarly"
+  robot.respond /maven (.+)/, (response) ->
+    searchTerm = response.match[1]
+    response.reply "Search term: #{searchTerm}"
