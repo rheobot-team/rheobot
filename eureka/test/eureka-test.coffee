@@ -12,16 +12,23 @@ describe 'eureka', ->
   afterEach ->
     @room.destroy()
 
-  it 'responds to hello', ->
-    @room.user.say('alice', '@hubot hello').then =>
+  it 'responds to eureka apps', ->
+    @room.user.say('alice', '@hubot eureka apps').then =>
       expect(@room.messages).to.eql [
-        ['alice', '@hubot hello']
-        ['hubot', '@alice hello!']
+        ['alice', '@hubot eureka apps']
+        ['hubot', '@alice apps']
       ]
 
-  it 'hears orly', ->
-    @room.user.say('bob', 'just wanted to say orly').then =>
+  it 'responds to eureka apps AppB', ->
+    @room.user.say('alice', '@hubot eureka apps AppB').then =>
       expect(@room.messages).to.eql [
-        ['bob', 'just wanted to say orly']
-        ['hubot', 'yarly']
+        ['alice', '@hubot eureka apps AppB']
+        ['hubot', '@alice apps with appId']
+      ]
+
+  it 'responds to eureka apps', ->
+    @room.user.say('alice', '@hubot eureka instances InstanceId001').then =>
+      expect(@room.messages).to.eql [
+        ['alice', '@hubot eureka instances InstanceId001']
+        ['hubot', '@alice instances']
       ]
