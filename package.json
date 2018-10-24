@@ -4,6 +4,9 @@
   "private": true,
   "author": "evanharris <evan.tyler.harris@gmail.com>",
   "description": "A simple helpful robot for your Company",
+  "scripts": {
+    "postinstall": "cd maven-search && npm install"
+  },
   "dependencies": {
     "hubot": "^3.1.1",
     "hubot-diagnostics": "^1.0.0",
