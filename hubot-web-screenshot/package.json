@@ -1,0 +1,41 @@
+{
+  "name": "hubot-web-screenshot",
+  "version": "1.0.0",
+  "description": "Takes a screenshot of a website and posts the resulting image. Supports various authentication methods.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "debug-test": "mocha --debug-brk --inspect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheobot-team/rheobot.git"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+  "author": "Evan Harris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rheobot-team/rheobot/issues"
+  },
+  "homepage": "https://github.com/rheobot-team/rheobot#readme",
+  "dependencies": {
+    "@slack/client": "^4.8.0"
+  },
+  "peerDependencies": {
+    "hubot": ">=2 <10 || 0.0.0-development",
+    "hubot-slack": "^4.5.5"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "hubot": "^3.1.1",
+    "hubot-mock-adapter-v3": "^1.0.1",
+    "hubot-slack": "^4.5.5",
+    "mocha": "^5.2.0",
+    "nock": "^10.0.1",
+    "url-parse": "^1.4.3",
+    "webpage-capture": "^0.1.3"
+  }
+}
